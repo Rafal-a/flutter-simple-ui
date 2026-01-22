@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CostumTextFiled extends StatelessWidget {
-   CostumTextFiled({super.key, required this.hintText, required this.iconData});
+   const CostumTextFiled({super.key, required this.hintText, required this.iconData, required this.controller});
 
-    final TextEditingController controller = TextEditingController();
+    final TextEditingController controller;
     final String hintText;
     final IconData iconData;
 
@@ -13,7 +13,7 @@ class CostumTextFiled extends StatelessWidget {
                     controller: controller,
                     decoration: InputDecoration(
                       hintText: hintText,
-                      prefixIcon: const Icon(iconData),
+                      prefixIcon:  Icon(iconData),
                       filled: true,
                       fillColor: Colors.grey.shade300,
                       border: OutlineInputBorder(
