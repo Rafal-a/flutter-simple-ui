@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_ui/app_color.dart';
+import 'package:flutter_simple_ui/register_page.dart';
 import 'package:flutter_simple_ui/widgets/costum_text_filed.dart';
 import 'package:flutter_simple_ui/widgets/logo_text.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,6 +9,8 @@ import 'package:ionicons/ionicons.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
+  
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +19,7 @@ class LoginPage extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
+          resizeToAvoidBottomInset: false,
           body: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Center(
@@ -135,15 +139,25 @@ class LoginPage extends StatelessWidget {
                           color: Colors.black,
                         ),
                       ),
-                      Text(
-                        'Sign Up',
-                        style: GoogleFonts.roboto(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RegisterPage(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Sign Up',
+                          style: GoogleFonts.roboto(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
                         ),
                       ),
-                    ],
+                  ),
+                  ],
                   ),
                 ],
               ),
