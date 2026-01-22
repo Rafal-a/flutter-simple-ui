@@ -3,7 +3,6 @@ import 'package:flutter_simple_ui/app_color.dart';
 import 'package:flutter_simple_ui/register_page.dart';
 import 'package:flutter_simple_ui/widgets/costum_text_filed.dart';
 import 'package:flutter_simple_ui/widgets/logo_text.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
